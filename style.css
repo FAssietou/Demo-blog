@@ -9,7 +9,7 @@ body, html {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     font-weight: 500;
-   
+    font-family: 'Andada Pro', serif;
 }
 
 .topbar {
@@ -27,6 +27,7 @@ body, html {
     color: #9f9f9f;
     padding: 0 53px 0 53px;
     font-weight: 500;
+    transition: color .3s;
 }
 
 .topbar nav a:hover, .topbar nav a.active {
@@ -40,6 +41,7 @@ body, html {
 .social a {
     padding: 0 10px 0 10px;
     opacity: .5;
+    transition: opacity .3s;
 }
 
 .social a:hover {
@@ -67,6 +69,7 @@ body, html {
     padding: 40px;
     z-index: 1;
     background: #FBFBFB;
+    font-family: 'Andada Pro', serif;
 }
 
 .sidebar-title {
@@ -110,6 +113,7 @@ body, html {
     margin: 50px auto;
     min-height: 203px;
     max-width: 940px;
+    font-family: 'Andada Pro', serif;
 }
 
 .article-img {
@@ -117,6 +121,11 @@ body, html {
     height: 203px;
     width: 343px;
     margin-right: 25px;
+    transition: transform .3s;
+}
+
+.article-img:hover {
+    transform: scale(1.1) rotate(25deg);
 }
 
 .article-img img {
@@ -142,7 +151,7 @@ body, html {
 .publication-title {
     font-size: 2.25rem;
     line-height: 1.1;
-    font-family: "cardo", serif;
+    font-family: 'Andada Pro', serif;
     margin: 0 0 15px 0;
 }
 
@@ -151,3 +160,51 @@ body, html {
     width: 20px;
 }
 
+@media only screen and (max-width: 1100px) and (min-width: 750px) {
+    .main {
+        display: block;
+    }
+    .article {
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .main {
+        display: inline-block;
+    }
+    .article {
+        width: 100%;
+    }
+    .article-img {
+        width: 100%;
+        float:none;
+    }
+    .publications {
+        color:#000;
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .topbar{
+        display: block;
+        position: absolute;
+    }
+    .topbar nav, .social {
+        text-align: center;
+    }
+    .topbar nav {
+        margin-bottom: 15px;
+    }
+    .topbar nav a {
+        display: inline-block;
+        white-space: nowrap;
+    }
+}
